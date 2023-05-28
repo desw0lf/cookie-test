@@ -18,7 +18,7 @@
         (function () {
             window.addEventListener("message", function(event) {
                 try {
-                    let data = JSON.parse(event.data);
+                    let data = JSON.parse(event.data || {});
                     if (data["test"] !== "cookie") {
                         return;
                     }
